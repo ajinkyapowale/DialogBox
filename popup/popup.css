@@ -1,0 +1,77 @@
+
+.OverlayDiv{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+	background: #000;
+	display: block;
+}
+.PopupTitle{
+	display: block;
+    padding: 0px;
+	float: left;
+    color: #ff6a00;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: none;
+    max-width: 82%;
+    overflow-wrap: break-word;
+}
+.PopupHead{
+	display: inline-block;
+	width:100%;
+    padding: 0px;
+	margin: 0px 0px 30px 0px;
+}
+.Popup_close{
+	background: url(./img/close-circle-blue-39x39.png) 0px top no-repeat;
+    border: 0px;
+    margin: 0px;
+	padding:0px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+	float: right;
+}
+/* .Popup_close:focus{
+	outline: none;
+} */
+.Popup{
+	width:650px;
+	height:auto;
+	background:#fff;
+	position:fixed;
+	z-index:10001;
+	border: 1px solid #ff6a00;
+	-webkit-border-radius:2px; 
+	-moz-border-radius:2px; 
+  	border-radius:2px;
+  	padding:15px;
+	display:none;
+}
+
+@media screen and (max-width : 768px) {
+    .Popup{
+		width:420px;
+	}
+}
+
+@media screen and (max-width : 480px) {
+    .Popup{
+		width:270px;
+	}
+}
+
+@media screen and (max-width : 320px){
+    .Popup{
+		width:200px;
+	}
+}
+
+

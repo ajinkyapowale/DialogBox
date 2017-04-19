@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Popup Demo</title>
+		<link rel="stylesheet" href="popup.css">
+		
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="popup.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#showPopup1').click(function(){
+					$('#popup1').popup(); <!--Opens up a popup with default configuration-->
+				});
+				$('#showPopup2').click(function(){
+					$('#popup2').popup({<!--Opens up a popup with the specified configuration-->
+						status:"open",
+						closeOnOverlayClick:false
+					});
+				});
+				$('#showPopup3').click(function(){
+					$('#popup2').popup({
+						closeOnOverlayClick:false
+					});
+				});
+			});
+			
+		</script>
+	</head>
+	<body style="height:700px;">
+		<a href="javascript:void(0)" id="showPopup1">Show Popup</a><br/><br/>
+		<a href="javascript:void(0)" id="showPopup3">Show Popup2</a>
+		
+		<!--Popup Starts-->
+			<div class="Popup" id="popup1">
+				<div class="PopupHead">
+					<button type="button" value="" class="Popup_close"></button>
+					<div class="PopupTitle">Popup1</div>
+				</div>
+				<div>
+					<br/>
+					<h3>Popup Body</h3><br/><br/><br/>
+					<input type="text"></input>
+					<a href="javascript:void(0)" id="showPopup2">Link on a Popup</a>
+				</div>
+			</div>
+		
+			<div class="Popup" id="popup2">
+				<div class="PopupHead">
+					<button type="button" value="" class="Popup_close"></button>
+					<div class="PopupTitle">Popup2</div>
+				</div>
+				<div>
+					<h3>Popup2 Body</h3>
+				</div>
+			</div>
+		<!--Popup Ends-->
+	</body>
+	
+</html>
